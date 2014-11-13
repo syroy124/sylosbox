@@ -11,7 +11,7 @@ def server():
     # your user on that system
     env.user = 'ubuntu'
     # Assumes that your *.pem key is in the same directory as your fabfile.py
-    env.key_filename = 'wk38cjSR.pem'
+    env.key_filename = '/home/sylvain/Documents/sylosKey.pem' 
 
 def deploy():
     site_folder = '/home/%s/sites/%s' % (env.user, env.host)  
