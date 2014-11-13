@@ -24,9 +24,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['localhost',
-                 '.sylosbox.com'
-]
+ALLOWED_HOSTS = ['localhost','.sylosbox.com']
 
 
 # Application definition
