@@ -24,7 +24,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['localhost','.sylosbox.com']
+ALLOWED_HOSTS = ['.sylosbox.com']
 
 
 # Application definition
@@ -83,3 +83,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
+
+from .secret_key import SECRET_KEY
