@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'lists',
+    'accounts',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -103,3 +104,8 @@ LOGGING = {
     },
     'root': {'level': 'INFO'},
 }
+
+AUTH_USER_MODEL = 'accounts.User'
+AUTHENTICATION_BACKENDS = (
+    'accounts.authentication.PersonaAuthenticationBackend',
+)
