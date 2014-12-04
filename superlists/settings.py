@@ -24,7 +24,9 @@ DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['.sylosbox.com']
+DOMAIN = "localhost"
+
+ALLOWED_HOSTS = [DOMAIN]
 
 
 # Application definition
