@@ -1,5 +1,6 @@
 from fabric.api import env, run
 
+env.key_filename = '~/Downloads/devAWS.pem'
 
 def _get_base_folder(host):
     return '~/sites/' + host
