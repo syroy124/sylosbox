@@ -28,6 +28,10 @@ DOMAIN = "localhost"
 
 ALLOWED_HOSTS = [DOMAIN]
 
+AUTH_USER_MODEL = 'accounts.User'
+AUTHENTICATION_BACKENDS = (
+    'accounts.authentication.PersonaAuthenticationBackend',
+)
 
 # Application definition
 
@@ -38,8 +42,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'lists',
+    'functional_tests',
     'accounts',
+    'lists',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -107,7 +112,3 @@ LOGGING = {
     'root': {'level': 'INFO'},
 }
 
-AUTH_USER_MODEL = 'accounts.User'
-AUTHENTICATION_BACKENDS = (
-    'accounts.authentication.PersonaAuthenticationBackend',
-)
