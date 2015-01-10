@@ -1,14 +1,15 @@
 #from django.test import LiveServerTestCase
-from django.conf import settings
+import os
 import sys
+import time
+from django.conf import settings
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from datetime import datetime
+from selenium.common.exceptions import WebDriverException
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
+
 from .server_tools import reset_database
-import os
-from datetime import datetime
-import time
-from selenium.common.exceptions import WebDriverException
 from .management.commands.create_session import create_pre_authenticated_session
 
 

@@ -1,5 +1,5 @@
 from selenium import webdriver
-from .base import FunctionalTest, create_pre_authenticated_session
+from .base import FunctionalTest
 from .home_and_list_pages import HomePage
 
 def quit_if_possible(browser):
@@ -28,7 +28,7 @@ class SharingTest(FunctionalTest):
         # She notices a "Share this list" option
         share_box = list_page.get_share_box()
         self.assertEqual(
-            self.get_attribute('placeholder'),
+            share_box.get_attribute('placeholder'),
             'your-friend@example.com'
         )
 
