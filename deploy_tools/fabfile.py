@@ -7,11 +7,13 @@ REPO_URL = 'https://github.com/syroy124/sylosbox.git'
 def server():
     """This pushes to the EC2 instance defined below"""
     # The Elastic IP to your server
-    env.host_string = '54.148.17.124'
+    # env.host_string = '54.148.17.124'
+    env.host_string = '54.191.89.135'
     # your user on that system
     env.user = 'ubuntu'
     # Assumes that your *.pem key is in the same directory as your fabfile.py
-    env.key_filename = '/home/sylvain/Documents/sylosKey.pem' 
+    # env.key_filename = '/home/sylvain/Documents/sylosKey.pem' 
+    env.key_filename = '/home/sylvain/Dowloads/devAWS.pem' 
 
 def deploy():
     site_folder = '/home/%s/sites/%s' % (env.user, env.host)  
