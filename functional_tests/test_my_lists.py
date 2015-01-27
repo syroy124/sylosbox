@@ -1,10 +1,11 @@
 from .base import FunctionalTest, create_pre_authenticated_session
 from .server_tools import create_session_on_server
+from unittest import skip
 
 class MyListsTest(FunctionalTest):
 
    
-
+    @skip
     def test_logged_in_users_lists_are_savec_as_my_lists(self):
         email = 'edith@example.com'
 
@@ -17,6 +18,7 @@ class MyListsTest(FunctionalTest):
         self.browser.get(self.server_url)
         self.wait_to_be_logged_in(email)
 
+    @skip
     def test_logged_in_users_lists_are_saved_as_my_lists(self):
         # Edith is a logged-in user
         self.create_pre_authenticated_session('edith@example.com')

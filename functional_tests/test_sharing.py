@@ -1,6 +1,7 @@
 from selenium import webdriver
 from .base import FunctionalTest
 from .home_and_list_pages import HomePage
+from unittest import skip
 
 def quit_if_possible(browser):
     try: browser.quit()
@@ -9,6 +10,7 @@ def quit_if_possible(browser):
 
 class SharingTest(FunctionalTest):
 
+    @skip
     def test_logged_in_users_lists_are_saved_as_my_lists(self):
         # Edith is a logged-in user
         self.create_pre_authenticated_session('edith@example.com')
